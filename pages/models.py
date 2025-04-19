@@ -1,6 +1,6 @@
 from django.db import models
 
-class Messages(models.Model):
+class Message(models.Model):
     receiver = models.CharField(max_length=20)
     content = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
