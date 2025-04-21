@@ -11,12 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Pacifico&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <!-- Title -->
-    <title>Lieblingsmensch</title>
+    <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
     <!-- Navbar -->
-
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary rounded mx-auto" aria-label="Eleventh navbar example"
+        style="background-color: #defffc !important;">
+            <div class="container-fluid">
+              <a class="navbar-brand fs-1" href="{% url 'home' %}" style="color: #dbafc1;">Lieblingsmensch</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              <div class="collapse navbar-collapse justify-content-end" id="navbarsExample09">
+                <form class="d-flex" role="search" method="post" action="{% url 'search' %}">
+                  {% csrf_token %}
+                  <input class="form-control me-2" type="search" placeholder="Name der Person" aria-label="Search" name="searched">
+                  <button class="btn btn-outline-primary" type="submit">Suchen</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+    </div>
 
     <!-- Main content -->
     <main class="d-flex flex-column">
@@ -25,5 +45,8 @@
     </main>
 
     <!-- Footer -->
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

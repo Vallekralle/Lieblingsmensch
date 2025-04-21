@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}asdf{% endblock title %}
+
+{% block content %}
+
+<div class="container d-flex flex-grow-1 flex-column justify-content-center text-center">
+    {% if searched %}
+        <p class="fs-3">
+            Es wurde/n {{ messages.count }} Nachricht/en für diese Person gefunden. 
+        </p>
+    {% else %}
+        <p class="fs-3">
+            Du hast nach keiner Person gesucht, 
+            nutze die Suchleiste in der Navigationsleiste,
+            um nach Personennamen zu suchen.
+        </p>
+    {% endif %}
+</div>
+
+{% endblock content %}
