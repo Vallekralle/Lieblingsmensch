@@ -9,7 +9,7 @@ class HomeTemplateView(TemplateView):
 
 
 class MessageCreateView(CreateView):
-    template_name = "create_message.html"
+    template_name = "pages/create_message.html"
     model = Message
     fields = ["receiver", "content"]
 
@@ -20,7 +20,7 @@ def search_message(request):
         messages = Message.objects.filter(receiver__contains=searched)
         return render(
             request, 
-            "search_message.html", 
+            "pages/search_message.html", 
             {
             "searched": searched,
             "messages": messages,
@@ -29,6 +29,6 @@ def search_message(request):
     else:
         return render(
             request,
-            "search_message.html",
+            "pages/search_message.html",
             {},
         )
