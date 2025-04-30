@@ -17,7 +17,7 @@ class MessageCreateView(CreateView):
 def search_message(request):
     if request.method == "POST":
         searched = request.POST["searched"]
-        messages = Message.objects.filter(receiver__contains=searched).reverse()
+        messages = Message.objects.filter(receiver__contains=searched).order_by('-created_at')
         return render(
             request, 
             "pages/search_message.html", 
