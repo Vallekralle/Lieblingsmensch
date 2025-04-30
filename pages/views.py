@@ -17,7 +17,7 @@ class MessageCreateView(CreateView):
 def search_message(request):
     if request.method == "POST":
         searched = request.POST["searched"]
-        messages = Message.objects.filter(receiver__contains=searched)
+        messages = Message.objects.filter(receiver__contains=searched).reverse()
         return render(
             request, 
             "pages/search_message.html", 
