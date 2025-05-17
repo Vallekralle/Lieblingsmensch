@@ -2,6 +2,20 @@
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
+    color: #dbafc1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #defffc !important;
+}
+
+::selection {
+    background: #e2e4f6;
 }
 
 main {
@@ -12,4 +26,36 @@ h1 {
     font-family: "Limelight", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+/* Bootstrap components */
+.btn-primary {
+    --bs-btn-bg: #f7665e !important;
+    --bs-btn-border-color: #f7665e !important;
+
+    --bs-btn-hover-bg: #f64940 !important;
+    --bs-btn-hover-border-color: #f64940 !important;
+
+    --bs-btn-active-bg: #f83c32 !important;
+    --bs-btn-active-border-color: #f83c32 !important;
+
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(247, 102, 94, .5) !important;
+}
+
+.form-control:focus {
+    border-color: rgba(247, 102, 94, .25) !important;
+    box-shadow: 0 0 0 .25rem rgba(247, 102, 94, .25) !important;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #f7665e !important;
+    --bs-btn-border-color: #f7665e !important;
+
+    --bs-btn-hover-bg: #f64940 !important;
+    --bs-btn-hover-border-color: #f64940 !important;
+
+    --bs-btn-active-bg: #f83c32 !important;
+    --bs-btn-active-border-color: #f83c32 !important;
+
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(247, 102, 94, .5) !important;
 }

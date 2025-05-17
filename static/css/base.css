@@ -27,3 +27,35 @@ h1 {
     font-weight: 400;
     font-style: normal;
 }
+
+/* Bootstrap components */
+.btn-primary {
+    --bs-btn-bg: #f7665e !important;
+    --bs-btn-border-color: #f7665e !important;
+
+    --bs-btn-hover-bg: #f64940 !important;
+    --bs-btn-hover-border-color: #f64940 !important;
+
+    --bs-btn-active-bg: #f83c32 !important;
+    --bs-btn-active-border-color: #f83c32 !important;
+
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(247, 102, 94, .5) !important;
+}
+
+.form-control:focus {
+    border-color: rgba(247, 102, 94, .25) !important;
+    box-shadow: 0 0 0 .25rem rgba(247, 102, 94, .25) !important;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #f7665e !important;
+    --bs-btn-border-color: #f7665e !important;
+
+    --bs-btn-hover-bg: #f64940 !important;
+    --bs-btn-hover-border-color: #f64940 !important;
+
+    --bs-btn-active-bg: #f83c32 !important;
+    --bs-btn-active-border-color: #f83c32 !important;
+
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(247, 102, 94, .5) !important;
+}
